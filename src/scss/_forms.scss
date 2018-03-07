@@ -1,0 +1,74 @@
+.formField {
+    margin: 0 0 10px 0;
+
+    input[type="text"],
+    input[type="url"],
+    input[type="email"] {
+        border: 1px solid $color_highlight;
+        border-radius: 0;
+        background: none;
+        font: inherit;
+        color: #fff;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        width: 100%;
+
+        &::placeholder {
+            color: #fff;
+            opacity: 0.75;
+        }
+        &.error {
+            border-color: red;
+        }
+    }
+
+    button {
+        background: $color_highlight none;
+        color: #fff;
+        border: none;
+        display: inline-block;
+        font: inherit;
+        padding: 10px;
+
+        &[disabled] {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+}
+
+/* -------- ✂ -------- */
+
+.datePicker {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td, th {
+        width: auto;
+        text-align: center;
+        border: 1px solid $color_highlight;
+    }
+    td:not(.empty) {
+        cursor: pointer;
+        
+        &:hover {
+            background-color: rgba(20, 64, 63, 0.6);
+        }
+    }
+    td.empty {
+        border: none;
+    }
+    &__header {
+        td {
+            border: 1px solid $color_highlight;
+            border-bottom: none;
+        }
+    }
+    td.datePicker__prevnext {
+        width: 40px;
+    }
+    .filled {
+        background-color: $color_highlight;
+    }
+}

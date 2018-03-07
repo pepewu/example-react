@@ -1,0 +1,425 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,italic&subset=latin,latin-ext");
+html, body {
+  height: 100%;
+  min-height: 250px;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background: #fff url("./assets/img/bg.jpg") center center no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+a {
+  color: #fff; }
+
+button {
+  cursor: pointer;
+  user-select: none; }
+
+#root {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center; }
+
+/* --- ✄ ----------------------- */
+.app {
+  min-height: 200px;
+  height: 90%;
+  max-height: 500px;
+  max-width: 650px;
+  width: 90%;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px; }
+  .app::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("./assets/img/bg.jpg") center center no-repeat;
+    background-size: cover;
+    content: '';
+    filter: blur(5px);
+    z-index: -2;
+    opacity: 1; }
+
+@media screen and (min-width: 600px) {
+  .app {
+    flex-direction: row; } }
+
+/* --- ✄ ----------------------- */
+.l-sidebar {
+  flex-shrink: 0;
+  background-color: rgba(2, 14, 26, 0.85);
+  border-bottom: 1px solid #14403f; }
+
+@media screen and (min-width: 600px) {
+  .l-sidebar {
+    width: 150px;
+    border-bottom: none;
+    border-right: 1px solid #14403f; } }
+
+/* --- ✄ ----------------------- */
+.l-content {
+  background-color: rgba(2, 14, 26, 0.85);
+  flex-grow: 1;
+  overflow: auto;
+  padding: 7px 15px 10px; }
+
+/* generated with fontello.com */
+@font-face {
+  font-family: 'icons';
+  src: url("./assets/fonts/icons.eot?14307117");
+  src: url("./assets/fonts/icons.eot?14307117#iefix") format("embedded-opentype"), url("./assets/fonts/icons.woff2?14307117") format("woff2"), url("./assets/fonts/icons.woff?14307117") format("woff"), url("./assets/fonts/icons.ttf?14307117") format("truetype"), url("./assets/fonts/icons.svg?14307117#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url('../font/icons.svg?14307117#icons') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-star:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-star-empty:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-list-alt:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-user:before {
+  content: '\e803'; }
+
+/* '' */
+.icon-plus:before {
+  content: '\e804'; }
+
+/* '' */
+.icon-heart:before {
+  content: '\e806'; }
+
+/* '' */
+.icon-heart-empty:before {
+  content: '\e807'; }
+
+/* '' */
+.icon-cancel:before {
+  content: '\e80e'; }
+
+/* '' */
+.icon-ok:before {
+  content: '\e811'; }
+
+/* '' */
+.icon-clock:before {
+  content: '\e81d'; }
+
+/* '' */
+.icon-ok-circled:before {
+  content: '\e841'; }
+
+/* '' */
+.icon-ok-circled2:before {
+  content: '\e842'; }
+
+/* '' */
+.icon-pencil:before {
+  content: '\e849'; }
+
+/* '' */
+.icon-doc-text:before {
+  content: '\f0f6'; }
+
+/* '' */
+.icon-angle-left:before {
+  content: '\f104'; }
+
+/* '' */
+.icon-angle-right:before {
+  content: '\f105'; }
+
+/* '' */
+.icon-angle-up:before {
+  content: '\f106'; }
+
+/* '' */
+.icon-angle-down:before {
+  content: '\f107'; }
+
+/* '' */
+.icon-calendar-check-o:before {
+  content: '\f274'; }
+
+/* '' */
+.appNav__wrap {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; }
+
+.appNav__item {
+  display: block;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 14px 5px 14px 15px;
+  cursor: pointer;
+  position: relative;
+  flex-grow: 1;
+  border: 0;
+  background: transparent none;
+  border-radius: 0;
+  outline: none;
+  text-align: left;
+  text-decoration: none; }
+  .appNav__item i {
+    display: none; }
+  .appNav__item.active, .appNav__item:hover, .appNav__item:focus, .appNav__item:active {
+    background-color: #14403f;
+    transition: background 0.3s; }
+
+.appNav__count {
+  color: #8a8995;
+  font-size: 13px;
+  margin-left: 10px; }
+
+@media screen and (min-width: 375px) {
+  .appNav__item {
+    padding: 14px 5px 14px 40px; }
+    .appNav__item i {
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: baseline;
+      position: absolute;
+      left: 12px; } }
+
+@media screen and (min-width: 600px) {
+  .appNav__wrap {
+    display: block; }
+  .appNav__item {
+    width: 100%; }
+  .appNav__count {
+    float: right;
+    display: block;
+    margin: 0;
+    width: 34px;
+    text-align: center; } }
+
+/* -------- ✂ -------- */
+.calendarCard {
+  border: 1px solid #14403f;
+  display: block;
+  max-width: 120px;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 1.5; }
+  .calendarCard span {
+    display: block; }
+  .calendarCard__day {
+    border-top: 1px solid #14403f;
+    border-bottom: 1px solid #14403f;
+    font-size: 42px;
+    line-height: 1.1; }
+  .calendarCard__month {
+    text-transform: uppercase; }
+
+/* -------- ✂ -------- */
+.filters ul {
+  display: flex;
+  margin: 0;
+  padding: 0; }
+
+.filters li {
+  border-top: 1px solid #14403f;
+  border-right: 1px solid #14403f;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase; }
+  .filters li:first-child {
+    border-left: 1px solid #14403f; }
+  .filters li:hover, .filters li.active {
+    background-color: #14403f; }
+
+/* -------- ✂ -------- */
+.listItem {
+  border-top: 1px solid #14403f;
+  padding: 15px 0;
+  margin: 0; }
+  .listItem__title {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: normal;
+    margin: 0 0 10px 0; }
+    .listItem__title a {
+      text-decoration: none; }
+  .listItem__tools {
+    display: block;
+    margin: 0;
+    padding: 0;
+    opacity: 0.75;
+    font-size: 14px; }
+    .listItem__tools li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px 0 0; }
+    .listItem__tools li.link {
+      cursor: pointer; }
+      .listItem__tools li.link:hover {
+        text-decoration: underline; }
+
+/* -------- ✂ -------- */
+.messanger {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  box-sizing: border-box;
+  max-width: 300px; }
+  .messanger .msg {
+    margin: 10px 0 0 0;
+    background: #e29b00;
+    padding: 10px;
+    color: #000; }
+
+/* -------- ✂ -------- */
+.pageHeader {
+  padding: 15px 0; }
+  .pageHeader h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: normal; }
+
+/* -------- ✂ -------- */
+.todayArticle {
+  border-top: 1px solid #14403f;
+  padding: 20px 0; }
+  .todayArticle__title {
+    margin: 0 0 10px 0;
+    font-size: 24px; }
+  .todayArticle a {
+    text-decoration: none; }
+    .todayArticle a:hover, .todayArticle a:focus {
+      text-decoration: underline; }
+
+@media screen and (min-width: 600px) {
+  .todayArticle__title {
+    font-size: 32px; }
+  .todayArticle p {
+    font-size: 18px; } }
+
+.formField {
+  margin: 0 0 10px 0; }
+  .formField input[type="text"],
+  .formField input[type="url"],
+  .formField input[type="email"] {
+    border: 1px solid #14403f;
+    border-radius: 0;
+    background: none;
+    font: inherit;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    width: 100%; }
+    .formField input[type="text"]::placeholder,
+    .formField input[type="url"]::placeholder,
+    .formField input[type="email"]::placeholder {
+      color: #fff;
+      opacity: 0.75; }
+    .formField input[type="text"].error,
+    .formField input[type="url"].error,
+    .formField input[type="email"].error {
+      border-color: red; }
+  .formField button {
+    background: #14403f none;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    font: inherit;
+    padding: 10px; }
+    .formField button[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed; }
+
+/* -------- ✂ -------- */
+.datePicker table {
+  width: 100%;
+  border-collapse: collapse; }
+
+.datePicker td, .datePicker th {
+  width: auto;
+  text-align: center;
+  border: 1px solid #14403f; }
+
+.datePicker td:not(.empty) {
+  cursor: pointer; }
+  .datePicker td:not(.empty):hover {
+    background-color: rgba(20, 64, 63, 0.6); }
+
+.datePicker td.empty {
+  border: none; }
+
+.datePicker__header td {
+  border: 1px solid #14403f;
+  border-bottom: none; }
+
+.datePicker td.datePicker__prevnext {
+  width: 40px; }
+
+.datePicker .filled {
+  background-color: #14403f; }
